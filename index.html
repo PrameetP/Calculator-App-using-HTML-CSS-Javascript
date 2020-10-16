@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Calculator</title>
+    
+  
+    <style>
+        .calculator {
+            background-color: grey;
+            border: 1px solid rgb(0, 0, 0);
+  border-radius: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+}
+
+.operator, .decimal{
+    background-color:rgb(55,55,55);
+    border-radius: 100%;
+    color: white;
+  
+    font-size: 15px;
+    height:60px;
+    width:60px;   
+    border: 2px solid black; 
+    
+}
+
+.displaydark{
+    background-color:black;
+    border-radius: 100%;
+    color: white;
+  
+    font-size: 15px;
+    height:60px;
+    width:60px;  
+    border: 2px solid rgb(55,55,55);   
+    
+}
+.calculator-screen{
+   width: 84%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 12px;
+    color: white;
+   padding :20px;
+    font-size: 15px;
+    text-align: right;
+    margin: 10px;
+   
+}
+.all-clear:hover{
+    background-color:lightgray;
+
+}
+.operator:hover,.displaydark:hover,.decimal:hover {
+   
+    background-color: lightgray;
+    color:black;
+}
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);;
+  
+  padding: 10px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px; ;
+}
+.all-clear{
+    background-color:rgba(255, 84, 61,100);
+    border-radius: 12px;
+    color: white;
+    font-size: 15px;
+    height:60px;
+    width:60px;   
+    border: 2px solid black;    
+    
+}
+.screen{
+    position: relative;
+    width:100%;
+}
+    </style>
+</head>
+<body>
+    
+    
+    <h1>Calculator</h1>
+   <div class="calculator">
+    <form action="">
+      <br>
+    
+        
+        
+    
+       <div class= screen>
+    <input type="text" id = "display" class="calculator-screen" value="" disabled/>
+      
+</div> 
+    <div class="calculator-keys">
+        <button type="button" value="1"  class="displaydark">1</button>
+        <button type="button" value="2" class="displaydark">2</button>
+        <button type="button" value="3" class="displaydark">3</button>
+       
+        <button type="button" value="/" class="operator">&divide;</button>
+        
+    
+      
+   
+        <button type="button" value="4" class="displaydark">4</button>
+        <button type="button" value="5" class="displaydark">5</button>
+        <button type="button" value="6" class="displaydark">6</button>
+        <button type="button" value="*" class="operator">&times;</button>
+       
+        
+        
+   
+        <button type="button" value="7" class="displaydark">7</button>
+        <button type="button" value="8" class="displaydark">8</button>
+        <button type="button" value="9" class="displaydark">9</button>
+        <button type="button" value="-" class="operator">-</button>
+        
+        
+    
+   
+        <button type="button" value="." class="decimal">.</button>
+        <button type="button" value="0" class="displaydark">0</button>
+      
+        <button type="button" value="=" class="equal-sign operator">=</button>
+        <button type="button" value="+" class="operator">&plus;</button>
+        
+        <button type="button" id="all-clear" value="AC" class="all-clear">AC</button>
+
+        
+    <br>
+    </div>
+ 
+    </form> 
+</div>
+    <script src="./js/index.js"></script>   
+</body>
+</html>
